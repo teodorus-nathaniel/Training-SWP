@@ -1,0 +1,32 @@
+.card-form {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+    padding: 60px 70px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.card-form h1 {
+    margin-bottom: 50px;
+}
+
+.card-form .input-field {
+    margin-bottom: 30px;
+}
+
+.card-form .err {
+    font-size: var(--small-font);
+    margin-top: 50px;
+    color: red;
+    display: block;
+}
+
+.card-form button {
+    margin-top: 10px;
+}
+
+.card-form .additional {
+    margin-top: 20px;
+    font-size: var(--small-font);
+    display: block;
+}

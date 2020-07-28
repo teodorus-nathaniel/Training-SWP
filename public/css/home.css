@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container a {
+    display: inline-block;
+    margin-top: 70px;
+}
+
+.container a button {
+    cursor: pointer;
+}
+
+.container p {
+    color: rgba(0, 0, 0, .6)
+}
