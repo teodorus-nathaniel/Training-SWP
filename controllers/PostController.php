@@ -1,5 +1,10 @@
 <?php
 
+if(!isset($_SESSION['user'])) {
+    echo json_encode([ 'status' => 'fail', 'message' => 'Login first' ]);
+    return;
+}
+
 if(Request::isMethod("POST")) {
     header('content-type: application/json');
     $postData = json_decode(file_get_contents('php://input'), true);

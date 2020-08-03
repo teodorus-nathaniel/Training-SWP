@@ -3,6 +3,11 @@
 $title = 'Register';
 $page_css = 'card-form.css';
 
+if(isset($_SESSION['user'])) {
+    header('Location: /');
+    return;
+}
+
 if(Request::isMethod("GET")) {
     include_once('./views/layouts/header.php');
     include_once('./views/register.php');

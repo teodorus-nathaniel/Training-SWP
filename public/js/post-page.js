@@ -24,7 +24,9 @@ cancelBtn.addEventListener('click', () => {
 });
 
 const getPostsData = async () => {
-  const res = await fetch('/posts');
+  const res = await fetch('/posts', {
+    credentials: 'same-origin'
+  });
   const data = await res.json();
 
   let html = '';

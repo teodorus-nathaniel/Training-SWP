@@ -3,6 +3,11 @@
 $title = 'Form';
 $page_css = 'post.css';
 
+if(!isset($_SESSION['user'])) {
+    header('Location: /login');
+    return;
+}
+
 if(Request::isMethod("GET")) {
     $posts = $connection->getPosts();
     $userId = $_SESSION["user"]->id;
