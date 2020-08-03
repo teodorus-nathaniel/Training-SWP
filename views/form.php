@@ -3,7 +3,6 @@
         <div class="insert-modal" id="insert-modal">
             <form class="form" action="/form" method="POST">
                 <h1>What's your story?</h1>
-                <input type="hidden" name="userId" value="<?= $userId ?>">
                 <textarea rows="10" name="post" id="post-field"></textarea>
                 <div class="actions">
                     <button class="alt" type="button" id="cancel-btn">Cancel</button>

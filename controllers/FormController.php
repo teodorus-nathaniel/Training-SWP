@@ -16,8 +16,7 @@ if(Request::isMethod("GET")) {
     include_once('./views/layouts/footer.php');
 } else if(Request::isMethod("POST")) {
     $content = $_POST['post'];
-    $userId = $_POST['userId'];
-    $connection->addPost($content, $userId);
+    $connection->addPost($content, $_SESSION['user']->id);
     exit(header('Location: /form'));
 } else {
     abort(405);
