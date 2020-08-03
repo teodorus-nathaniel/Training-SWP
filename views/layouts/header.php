@@ -1,5 +1,3 @@
-<?php session_start() ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +16,11 @@
             <span class="bold">Posting</span>
         </a>
         <div class="links">
-            <a href="/register" class="alt">Join Us</a>
-            <a href="/login">Login</a>
+            <?php if(!isset($_SESSION['user'])) { ?>
+                <a href="/register" class="alt">Join Us</a>
+                <a href="/login">Login</a>
+            <?php } else { ?>
+                <a href="/logout">Logout</a>
+            <?php } ?>
         </div>
     </nav>

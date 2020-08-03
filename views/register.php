@@ -17,7 +17,11 @@
             <div class="overlay"></div>
         </div>
         <span class="err bold">
-            <?= $_GET['err'] == "1" ? 'Confirmation password not same' : ($_GET['err'] == "2" ? 'Register Failed' : ($_GET['err'] == "3" ? 'Username is already used' : '&nbsp;')) ?></span>
+            <?= isset($_GET['err']) ? 
+                ($_GET['err'] == "1" ? 'Confirmation password not same' : 
+                    ($_GET['err'] == "2" ? 'Register Failed' : 
+                        ($_GET['err'] == "3" ? 'Username is already used' : '&nbsp;'))) : 
+                            '&nbsp;' ?></span>
         <button>Register</button>
         
         <span class="additional bold">Already have an account? <a href="/login" class="link">Login</a> here!</span>

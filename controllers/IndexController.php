@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION['user'])) {
+if(isset($_SESSION['user'])) {
     $title = "Posts";
     $page_css = 'post.css';
     

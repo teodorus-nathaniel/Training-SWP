@@ -12,8 +12,7 @@ if(Request::isMethod("GET")) {
     if ($user !== null) {
         $_SESSION['user'] = $user;
         setcookie('id', $user->id, time()+3600*24);
-        setcookie('username', $user->username, time()+3600*24);
-        exit(header('Location: /posts'));
+        exit(header('Location: /'));
     }
     exit(header('Location: /login?err=1'));
 } else {

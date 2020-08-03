@@ -32,6 +32,20 @@
         $user = mysqli_fetch_object($result);
       }
 
+      return $user;
+    }
+
+    public function getUser(string $id) {
+      $query = "SELECT *
+        FROM `user`
+        WHERE `id` = $id";
+
+      $result = $this->mysqli->query($query);
+
+      $user = null;
+      if ($result->num_rows !== 0) {
+        $user = mysqli_fetch_object($result);
+      }
 
       return $user;
     }
@@ -92,7 +106,7 @@
         array_push($posts, $row);
       }
 
-      return json_encode($posts);
+      return array_reverse($posts);
     }
   }
   

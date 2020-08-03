@@ -5,8 +5,8 @@
   require_once('core/utilities.php');
 
   $_server_   = 'localhost:3306';
-  $_username_ = 'prk';
-  $_password_ = 'prk';
+  $_username_ = 'root';
+  $_password_ = '';
   $_database_ = 'prk';
 
 
