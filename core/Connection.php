@@ -28,7 +28,7 @@
       $result = $this->mysqli->query($query);
 
       $user = null;
-      if ($result->num_rows !== 0) {
+      if ($result->num_rows != 0) {
         $user = mysqli_fetch_object($result);
       }
 
@@ -54,7 +54,6 @@
     {
       if($password !== $confirm_pass) {
         exit(header("Location: /register?err=1"));
-        return;
       }
 
       $query = "SELECT * FROM `user` WHERE `username` = '$username'";
@@ -62,7 +61,6 @@
 
       if($result->num_rows !== 0) {
         exit(header("Location: /register?err=3"));
-        return;
       }
       
       $query = "INSERT INTO `User` (`username`, `password`) VALUES (
@@ -70,6 +68,7 @@
       )";
 
       $result = $this->mysqli->query($query);
+      
       if($result) {
         exit(header("Location: /login"));
       } else {

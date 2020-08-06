@@ -48,6 +48,7 @@ submitBtn.addEventListener('click', async () => {
     body: JSON.stringify({ post: postField.value, userId: getCookie('id') })
   });
   const data = await res.json();
+  postField.value = '';
 
   getPostsData();
   insertModal.classList.remove('active');

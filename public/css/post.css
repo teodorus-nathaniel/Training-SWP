@@ -1,108 +1,112 @@
 .post-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .card {
-    min-height: 250px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 30px;
-    max-width: 400px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
-    border-radius: 5px;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+  border-radius: 5px;
 }
 
 .card .profile {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .card .profile img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .card p {
-    margin: 20px 0;
+  margin: 20px 0;
+}
+
+.card p img {
+  width: 100%;
 }
 
 .card .time {
-    align-self: flex-end;
-    font-size: var(--small-font);
-    color: rgba(0, 0, 0, .6);
+  align-self: flex-end;
+  font-size: var(--small-font);
+  color: rgba(0, 0, 0, .6);
 }
 
 .insert-modal {
-    position: fixed;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, .5);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 300ms ease-out;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-out;
 }
 
 .insert-modal.active {
-    opacity: 1;
-    pointer-events: initial;
+  opacity: 1;
+  pointer-events: initial;
 }
 
 .insert-modal h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .insert-modal .form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 50px;
-    padding-bottom: 30px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .insert-modal .form textarea {
-    resize: none;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin-bottom: 30px;
-    padding: .75em;
-    font-size: 1rem;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+  padding: .75em;
+  font-size: 1rem;
 }
 
 .insert-modal .form .actions {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .post-btn {
-    position: fixed;
-    bottom: 100px;
-    right: calc((100vw - var(--max-width)) / 2 + 50px);
-    z-index: 99;
+  position: fixed;
+  bottom: 100px;
+  right: calc((100vw - var(--max-width)) / 2 + 50px);
+  z-index: 99;
 }
 
 @media screen and (max-width: 1140px) {
-    .post-btn {
-        right: 50px;
-    }
+  .post-btn {
+    right: 50px;
+  }
 }
 
 .post-btn button {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    border-radius: 50%;
-    font-size: 32px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
