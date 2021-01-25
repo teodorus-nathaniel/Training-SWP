@@ -45,7 +45,7 @@ submitBtn.addEventListener('click', async () => {
       'Content-Type': 'application/json'
     },
     credentials: 'same-origin',
-    body: JSON.stringify({ post: postField.value, userId: getCookie('id') })
+    body: JSON.stringify({ post: postField.value })
   });
   const data = await res.json();
   postField.value = '';
