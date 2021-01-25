@@ -10,12 +10,12 @@
           or die('set your database configuration : ' . __DIR__ . "/bootstrap.php");
     }
 
-    public static function getInstance(string $server, string $username, string $password,  string $database)
+    public static function getInstance(string $server, string $username, string $password, string $database)
     {
-      if (!isset($connection)) 
-        $connection = new Connection($server, $username, $password, $database);
+      if (!isset(Connection::$connection)) 
+        self::$connection = new Connection($server, $username, $password, $database);
 
-      return $connection;
+      return self::$connection;
     }
 
     public function login(string $username, string $password)
