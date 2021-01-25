@@ -63,7 +63,7 @@ nav .links a {
   padding: 1.75em 3em;
   display: block;
   background-color: transparent;
-  transition: background-color 300ms ease-out;
+  transition: background-color 150ms ease-out;
 }
 
 nav .links a:hover,
@@ -73,7 +73,7 @@ nav .links a:focus {
 
 nav .links a.alt {
   background-color: var(--accent-color);
-  transition: filter 300ms ease-out;
+  transition: filter 150ms ease-out;
 }
 
 nav .links a.alt:hover,
@@ -136,7 +136,7 @@ main {
   z-index: 0;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease-out;
+  transition: transform 150ms ease-out;
   top: 0;
 }
 
@@ -145,7 +145,7 @@ main {
   font-size: 1rem;
   z-index: 1;
   top: 50%;
-  transition: top 300ms ease-out, font-size 300ms ease-out;
+  transition: top 150ms ease-out, font-size 150ms ease-out;
 }
 
 .input-field .field.active ~ label {
@@ -166,7 +166,7 @@ main {
   height: 70%;
   transform: scaleY(.5);
   transform-origin: bottom;
-  transition: transform 300ms ease-out;
+  transition: transform 150ms ease-out;
   left: 0;
   z-index: -1;
 }
